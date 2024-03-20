@@ -1,16 +1,9 @@
 export default class Currency {
   constructor(code, name) {
-    if (Currency.isString(name)) {
-      this._name = name;
-    } else {
-      throw new TypeError('Name should be a string');
-    }
-
-    if (Currency.isString(code)) {
-      this._code = code;
-    } else {
-      throw new TypeError('Code should be a string');
-    }
+    this._code = '';
+    this._name = '';
+    this.code = code;
+    this.name = name;
   }
 
   set name(value) {
