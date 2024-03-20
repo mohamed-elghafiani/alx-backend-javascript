@@ -22,6 +22,10 @@ export default class Currency {
     this._code = value;
   }
 
+  get code() {
+    return this._code;
+  }
+
   static isString(value) {
     if (typeof value === 'string') {
       return true;
