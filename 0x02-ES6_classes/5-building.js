@@ -1,7 +1,7 @@
 export default class Building {
   constructor(sqft) {
     this.sqft = sqft;
-    if (this.constructor !== Building && this.evacuationWarningMessage === undefined) {
+    if (this.constructor !== Building && typeof this.evacuationWarningMessage !== 'function') {
       throw new Error('Class extending Building must define evacuationWarningMessage');
     }
   }
