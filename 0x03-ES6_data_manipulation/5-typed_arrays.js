@@ -3,9 +3,7 @@ export default function createInt8TypedArray(length, position, value) {
     throw new Error('Position outside range');
   }
 
-  const buffer = new ArrayBuffer(length);
-  const view = new Int8Array(buffer);
-  view[position] = value;
-
-  return buffer;
+  const res = new DataView(new ArrayBuffer(length), 0, length);
+  res.setInt8(position, value);
+  return res;
 }
