@@ -66,3 +66,26 @@ function createEmployee(salary: number | string): Director | Teacher {
     return new Director();
   }
 }
+
+/**
+ * isDirector - a function that:
+ * - Accepts employee as an argument
+ * and be used as a type predicate and if the employee is a director
+ */
+function isDirector(employee: Director | Teacher): employee is Director {
+  return employee instanceof Director;
+}
+
+/**
+ * executeWork - a function that:
+ * - Accepts employee as an argument
+ * if the employee is a Director, it will call workDirectorTasks
+ * if the employee is a Teacher, it will call workTeacherTasks
+ */
+function executeWork(employee: Director | Teacher): string {
+  if (isDirector(employee)) {
+    console.log(employee.workDirectorTasks());
+  } else {
+    console.log(employee.workTeacherTasks());
+  }
+}
