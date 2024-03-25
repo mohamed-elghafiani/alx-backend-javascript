@@ -89,3 +89,21 @@ function executeWork(employee: Director | Teacher): string {
     console.log(employee.workTeacherTasks());
   }
 }
+
+// The following involves writing a String literal type named Subjects allowing a variable to have the value Math or History only.
+// Then we write a function named teachClass:
+// - it takes todayClass as an argument
+// - it will return the string Teaching Math if todayClass is Math
+// - it will return the string Teaching History if todayClass is History
+
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else if (todayClass === 'History') {
+    return 'Teaching History';
+  }
+
+  throw new Error('Invalid subject');
+}
