@@ -23,3 +23,14 @@ interface Teacher {
 interface Directors extends Teacher {
   numberOfReports: number;
 }
+
+// Interface for the printTeacher function
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+// Implementation of the printTeacher function
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+    const initial = firstName.charAt(0); // Get the first letter of the firstName
+    return `${initial}. ${lastName}`; // Concatenate the initial and lastName with a dot
+};
