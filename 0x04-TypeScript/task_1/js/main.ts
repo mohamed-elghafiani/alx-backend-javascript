@@ -26,11 +26,43 @@ interface Directors extends Teacher {
 
 // Interface for the printTeacher function
 interface printTeacherFunction {
-    (firstName: string, lastName: string): string;
+  (firstName: string, lastName: string): string;
 }
 
 // Implementation of the printTeacher function
 const printTeacher: printTeacherFunction = (firstName, lastName) => {
-    const initial = firstName.charAt(0); // Get the first letter of the firstName
-    return `${initial}. ${lastName}`; // Concatenate the initial and lastName with a dot
+  const initial = firstName.charAt(0); // Get the first letter of the firstName
+  return `${initial}. ${lastName}`; // Concatenate the initial and lastName with a dot
 };
+
+// writing a student class
+
+// Interface describing the constructor of StudentClass
+interface StudentClassConstructor {
+  new (firstName: string, lastName: string): StudentClass;
+}
+
+// Interface describing the StudentClass
+interface StudentClass {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+// Implementation of the StudentClass
+class StudentClassImpl implements StudentClass {
+  private _firstName: string;
+  private _lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this._firstName = firstName;
+    this._lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this._firstName;
+  }
+}
