@@ -1,7 +1,7 @@
 # 0x05. NodeJS Basics
 ## `Back-end` `JavaScript` `ES6` `NodeJS` `ExpressJS`
 
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/1/82692897e15d9f03256f.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240430%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240430T184024Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=14f371c9c5b83cf1c75d5c9bd67e0be08d0da47a5c83053b26ef929088de56c3)
+![MEME :-)](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/1/82692897e15d9f03256f.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240430%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240430T184024Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=14f371c9c5b83cf1c75d5c9bd67e0be08d0da47a5c83053b26ef929088de56c3)
 
 ## Resources
 * [Node JS getting started](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
