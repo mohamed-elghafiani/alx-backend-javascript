@@ -5,8 +5,7 @@ const countStudents = require('./3-read_file_async');
 const app = http.createServer((req, res) => {
     const url = new URL(req.url, `http://${req.headers.host}`);
     const path = url.pathname;
-    const databasePath = process.argv.slice(2)
-
+    const databasePath = process.argv.slice(2)[0];
     res.writeHead(200, { 'Content-Type': 'text/plain' });
 
     if (path === '/') {
