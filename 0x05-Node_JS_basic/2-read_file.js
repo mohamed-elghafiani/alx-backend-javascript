@@ -9,16 +9,16 @@ function countStudents(path) {
     const rows = data.split('\n').filter(Boolean);
 
     // Remove the first row (headers)
-    const headers = rows.shift();
+    rows.shift();
 
     rows.forEach(row => {
-      const [firstName, lastName, age, field] = row.split(',');
+      row = row.split(',');
 
-      if (!studentsByField[field]) {
-        studentsByField[field] = [];
+      if (!studentsByField[row[3]]) {
+        studentsByField[row[3]] = [];
       }
 
-      studentsByField[field].push(firstName);
+      studentsByField[row[3]].push(row[0]);
     });
 
     console.log(`Number of students: ${rows.length}`);
