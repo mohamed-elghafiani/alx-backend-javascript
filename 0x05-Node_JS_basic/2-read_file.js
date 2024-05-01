@@ -25,7 +25,9 @@ function countStudents(path) {
 
     for (const field in studentsByField) {
       const fieldStudents = studentsByField[field];
-      console.log(`Number of students in ${field}: ${fieldStudents.length}. List: ${fieldStudents.join(', ')}`);
+      const students = fieldStudents.join(', ');
+      const numStudents = fieldStudents.length;
+      console.log(`Number of students in ${field}: ${numStudents}. List: ${students}`);
     }
   } catch (err) {
     throw new Error('Cannot load the database');
