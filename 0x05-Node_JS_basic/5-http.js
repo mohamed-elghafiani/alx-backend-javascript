@@ -5,13 +5,13 @@ const countStudents = require('./3-read_file_async');
 const app = http.createServer((req, res) => {
     const url = new URL(req.url, `http://${req.headers.host}`);
     const path = url.pathname;
+    const databasePath = process.argv.slice(2)
 
     res.writeHead(200, { 'Content-Type': 'text/plain' });
 
     if (path === '/') {
         res.end('Hello Holberton School!');
     } else if (path === '/students') {
-        const databasePath = 'database.csv';
         countStudents(databasePath)
             .then((studentsInfo) => {
                 res.end(`This is the list of our students\n${studentsInfo}`);
