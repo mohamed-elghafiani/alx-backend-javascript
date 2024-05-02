@@ -23,7 +23,7 @@ app.get('/students', async (req, res) => {
     const result = await countStudents(dbFilePath);
     res.status(200).send(`This is the list of our students\n${result}`);
   } catch (error) {
-    res.status(500).send(error.message);
+    res.status(404).send(error.message);
   }
 });
 
