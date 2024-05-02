@@ -14,13 +14,11 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.setHeader('Content-Length', responseText.length);
-  res.send('Hello Holberton School!');
+  res.status(200).send('Hello Holberton School!');
 });
 
 app.get('/students', async (req, res) => {
   const dbFilePath = process.argv[2];
-  res.setHeader('Content-Type', 'text/plain');
   try {
     const result = await countStudents(dbFilePath);
     res.status(200).send(`This is the list of our students\n${result}`);
