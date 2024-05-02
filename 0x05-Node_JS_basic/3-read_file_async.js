@@ -23,8 +23,6 @@ async function countStudents(path) {
       studentsByField[row[3]].push(row[0]);
     });
 
-    console.log(`Number of students: ${rows.length}`);
-
     let studentsInfo = `Number of students: ${rows.length}\n`;
     for (const field in studentsByField) {
       const fieldStudents = studentsByField[field];
