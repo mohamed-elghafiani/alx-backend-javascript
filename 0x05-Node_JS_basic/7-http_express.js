@@ -21,7 +21,7 @@ app.get('/students', async (req, res) => {
     const dbFilePath = process.argv[2];
     try {
         const result = await countStudents(dbFilePath);
-        res.send(`This is the list of our students\n${result}`);
+        res.status(200).send(`This is the list of our students\n${result}`);
     } catch (error) {
         res.status(500).send(error.message);
     }
