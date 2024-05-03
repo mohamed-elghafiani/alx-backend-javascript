@@ -4,12 +4,15 @@
   "description": "alx project",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/.bin/mocha"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^10.4.0"
+  },
+  "dependencies": {
+    "chai": "^5.1.0"
   }
 }
