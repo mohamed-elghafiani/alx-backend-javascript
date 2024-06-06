@@ -6,30 +6,30 @@ async function countStudents(path) {
   const readFileAsync = promisify(fs.readFile);
 
   try {
-    const data = await fs.readFileSync(path, 'utf-8');
+    const data = await readFileAsync(path, 'utf-8');
 
     const rows = data.split('\n').filter(Boolean);
 
     // Remove the first row (headers)
     rows.shift();
 
-    rows.forEach(row => {
-      row = row.split(',');
+    rows.forEach((row) => {
+      const items = row.split(',');
 
-      if (!studentsByField[row[3]]) {
-        studentsByField[row[3]] = [];
+      if (!studentsByField[items[3]]) {
+        studentsByField[items[3]] = [];
       }
 
-      studentsByField[row[3]].push(row[0]);
+      studentsByField[items[3]].push(items[0]);
     });
 
     let studentsInfo = `Number of students: ${rows.length}\n`;
-    for (const field in studentsByField) {
+    Object.keys(studentsByField).forEach((field) => {
       const fieldStudents = studentsByField[field];
       const students = fieldStudents.join(', ');
       const numStudents = fieldStudents.length;
       studentsInfo += `Number of students in ${field}: ${numStudents}. List: ${students}\n`;
-    }
+    });
 
     console.log(studentsInfo.trim());
     return studentsInfo.trim();
