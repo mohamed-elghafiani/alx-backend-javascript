@@ -30,7 +30,6 @@ async function countStudents(path) {
       const numStudents = fieldStudents.length;
       console.log(`Number of students in ${field}: ${numStudents}. List: ${students}`);
     });
-    return data;
   } catch (err) {
     throw new Error('Cannot load the database');
   }
