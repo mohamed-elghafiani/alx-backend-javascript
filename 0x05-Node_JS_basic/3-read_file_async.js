@@ -28,11 +28,9 @@ async function countStudents(path) {
       const fieldStudents = studentsByField[field];
       const students = fieldStudents.join(', ');
       const numStudents = fieldStudents.length;
-      studentsInfo += `Number of students in ${field}: ${numStudents}. List: ${students}\n`;
+      console.log(`Number of students in ${field}: ${numStudents}. List: ${students}`);
     });
-
-    console.log(studentsInfo.trim());
-    return studentsInfo.trim();
+    return data;
   } catch (err) {
     throw new Error('Cannot load the database');
   }
